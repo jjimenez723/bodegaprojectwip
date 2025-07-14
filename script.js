@@ -1,5 +1,5 @@
 // 1) Initialize map
-const map = L.map('map').setView([40.7357, -74.1724], 13);
+const map = L.map('map').setView([40.7357, -74.1724], 15);
 
 // 2) Base layers
 const osmStandard = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
