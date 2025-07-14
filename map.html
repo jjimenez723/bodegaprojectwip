@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fresh-Produce Heatmap</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet/dist/leaflet.css"
+  />
+  <!-- MarkerCluster CSS (optional) -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css"
+  />
+  <!-- Your custom styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="map"></div>
+  <div class="controls">
+    <label>
+      Address:
+      <input type="text" id="address" placeholder="e.g. 100 Market St, Newark, NJ" />
+    </label>
+    <label>
+      Radius (km):
+      <input type="number" id="radius" value="2" min="0.1" step="0.1" />
+    </label>
+    <button id="filterBtn">Filter by Distance</button>
+    <label>
+      <input type="checkbox" id="accessToggle" />
+      High-Contrast Mode
+    </label>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <!-- Heat plugin -->
+  <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+  <!-- MarkerCluster plugin -->
+  <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+  <!-- Your map logic -->
+  <script src="script.js"></script>
+</body>
+</html>
