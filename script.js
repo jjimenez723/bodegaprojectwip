@@ -19,7 +19,7 @@ fetch('produce.geojson')
   .then(data => {
     // heatmap data
     const pHeat = data.features.map(f => [f.geometry.coordinates[1], f.geometry.coordinates[0], 0.5]);
-    produceHeat = L.heatLayer(pHeat, { radius: 25, gradient: {0.4: 'blue', 1: 'cyan'} }).addTo(map);
+    produceHeat = L.heatLayer(pHeat, { radius: 40, gradient: {0.4: 'blue', 1: 'cyan'} }).addTo(map);
 
     // clusters
     produceCluster = L.markerClusterGroup({ chunkedLoading: true });
